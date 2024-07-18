@@ -1,0 +1,1 @@
+Al utilizar este repositorio, instalar todas las depencias con pnpm install. Adicionalmente, crear una carpeta .env y poner dos constantes PORT Y HOST.
