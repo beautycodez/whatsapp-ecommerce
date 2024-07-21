@@ -1,0 +1,98 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header picture {
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+header picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+header form input {
+    width: 400px;
+    height: 30px;
+}
+nav {
+    background: #2a2a72;
+}
+.primary-nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5px;
+}
+.primary-nav ul li {
+    list-style: none;
+}
+.primary-nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+.hero-banner {
+    position: relative;
+}
+.hero-banner picture {
+    width: 100%;
+}
+.hero-banner picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-banner h3 {
+    position: absolute;
+    top: 50px;
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 20px;
+}
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgb(189, 189, 218);
+}
+.categorias h1 {
+    display: inline;
+    text-align: center;
+    width: 100%;
+}
+.categorias h4 {
+    text-align: center;
+}
+.categorias section {
+    padding: 20px;
+    margin: 20px;
+    border: solid 1px black;
+    width: fit-content;
+}
+.categorias section picture {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+.categorias section picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 100px;
+    background: #009ffd;
+    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%)
+}
+footer div {
+    /* width: 50%; */
+}
+.maps {
+    width: 25%;
+    border-radius: 50%;
+}
