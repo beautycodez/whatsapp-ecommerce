@@ -28,6 +28,7 @@ function populateDataProducts(data) {
       unicasCategorias.push(categoria);
       unicasIdCategorias.push(element.id);
       const sectionCategory = document.createElement("section");
+      const linkCategory = document.createElement("a");
       const h4Category = document.createElement("h4");
       const pictureCategory = document.createElement("picture");
       const imgCategory = document.createElement("img");
@@ -35,11 +36,13 @@ function populateDataProducts(data) {
       h4Category.innerHTML = element.category.name;
       imgCategory.setAttribute("src", element.category.image)
       imgCategory.setAttribute("alt", `imagen de ${element.category.name}`)
+      linkCategory.setAttribute("href", `/product/category/${element.category.id}`)
 
       pictureCategory.appendChild(imgCategory);
       sectionCategory.appendChild(pictureCategory);
       sectionCategory.appendChild(h4Category);
-      categorias.appendChild(sectionCategory);
+      linkCategory.appendChild(sectionCategory)
+      categorias.appendChild(linkCategory);
     }
   });
   console.log("Categorias unicas:", unicasCategorias);
