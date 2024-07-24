@@ -26,11 +26,15 @@ utilities.productsByCategoryHtml = async function (data) {
   if (data.length > 0) {
     grid = '<div id="pro-display">';
     data.forEach((product) => {
+      const imgURL = this.extractImageUrl(product.images[0]);  
       grid += `
-      <section>
+      <section class="pro-section">
+        <h3>${product.title}</h3>
         <picture class="pro-picture">
-            <img src="${product.images[0]}">
+            <img src="${imgURL}">
         </picture>
+        <p>Price: $${product.price}</p>
+        <p>Description: ${product.description}</p>
       </section>
       `
     });
@@ -41,6 +45,19 @@ utilities.productsByCategoryHtml = async function (data) {
   return grid;
 };
 
+utilities.extractImageUrl = function(imageString) {
+    // Usar una expresión regular para extraer el contenido entre comillas que comienza con https
+    const regex = /https:\/\/[^"]+/;
+    const match = regex.exec(imageString);
+  
+    // Si se encuentra un match, devolver el URL
+    if (match) {
+      return match[0];
+    }
+    
+    // Si no se encuentra un match, devolver null
+    return null;
+  }
 /* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 

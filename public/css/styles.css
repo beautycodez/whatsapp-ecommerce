@@ -1,3 +1,11 @@
+h1, h2, h3, h4, h5 {
+    font-family: "Lustria", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+ul, li, a, p, span, button {
+    font-family: "Ubuntu", serif;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -30,10 +38,11 @@ nav {
 }
 .primary-nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .hero-banner {
     position: relative;
+    margin: 50px 0;
 }
 .hero-banner picture {
     width: 100%;
@@ -55,6 +64,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 50px 0;
     background: rgb(189, 189, 218);
 }
 .categorias h1 {
@@ -110,6 +120,11 @@ nav {
 .userComment {
     margin-top: 100px;
 }
+.faqDiv {
+    background-color: #2A2A72;
+    padding: 50px;
+    margin: 50px 0;
+}
 .faqDiv h1{
     text-align: center;
 }
@@ -118,6 +133,14 @@ nav {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 50px;
     row-gap: 40px;
+    color: white;
+}
+.faq ul li {
+    list-style: none;
+}
+.faq ul li a {
+    color: white;
+    text-decoration: none;
 }
 .faq ul li:first-child {
     grid-column: 1/3;    
@@ -147,9 +170,26 @@ footer {
 }
 
 /* product pages */
+#pro-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+    gap: 50px;
+    background: rgb(189, 189, 218);
+}
+.pro-section {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px rgb(172, 168, 168);
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+}
 .pro-picture {
     display: block;
-    width: 200px;
+    width: fit-content;
     height: 200px;
 }
 .pro-picture img {
